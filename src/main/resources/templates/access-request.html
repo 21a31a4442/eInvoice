@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Request Access</title>
+</head>
+
+<body>
+	<h1>Request Access</h1>
+	<form action="/access-request/save" method="post" th:object="${request}">
+
+
+		<label for="firstName">First Name:</label>
+		<input type="text" id="f_name" name="firstName" th:field="*{firstName}" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" th:field="*{email}" required>
+
+		<label for="mobile">Mobile:</label>
+		<input type="number" id="mobile" name="mobile" th:field="*{mobile}" required>
+
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="l_name" name="lastName" th:filed="*{lastName}" required>
+
+		<label for="role">Requested Role:</label>
+		<input type="text" id="role" name="role" th:field="*{requestedRole}" required>
+
+		<label for="username">Username:</label>
+		<input type="text" id="uname" name="username" th:field="*{username}" required>
+
+		<label for="role">Password:</label>
+		<input type="password" id="pwd" name="password" th:field="*{password}" required>
+
+
+
+
+		<button type="submit">Submit Request</button>
+	</form>
+	<a href="/">Back to Login</a>
+</body>
+
+</html>

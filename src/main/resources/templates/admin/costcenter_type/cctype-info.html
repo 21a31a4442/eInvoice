@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap Table Example</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div th:fragment="content">
+		<div class="card">
+			<div class="container my-5">
+				<a class="btn btn-primary" href="/costcentertype/add-cctype" style="float: right;">Add CostCenter Type</a>
+
+				<h2 class="text-center mb-4">CostCenter Type Master</h2>
+				<div class="table-responsive" style="margin-top: 10px;">
+
+					<table id="datatableid" class="table table-striped" style="width:100%;">
+						<thead class="table-primary" style="background-color:#4e73df;">
+
+							<tr style="font-size:12px; padding: 50%;">
+								<th><strong>Name</strong></th>
+								<th><strong>Actions</strong></th>
+							</tr>
+						</thead>
+						<tbody style="background-color:#ffffff; color: #000000;">
+
+							<tr th:each="cc : ${cctypes}">
+								<td th:text="${cc.cc_type}"></td>
+								<td>
+									<a class="btn btn-primary"
+										th:href="@{/costcentertype/update-cctype?(id=${cc.id})}">Update</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+</body>
+
+</html>

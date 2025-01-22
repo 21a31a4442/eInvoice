@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Request Access</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div class="reg-container">
+		<form class="login-form" id="accessRequestForm" action="/access-request/save" method="post" th:object="${request}">
+			<h2>Request Access</h2>
+
+			<div class="input-group">
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" th:field="*{firstName}" placeholder="First Name" required>
+			</div>
+
+			<div class="input-group">
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" th:filed="*{lastName}" placeholder="Last Name" required>
+			</div>
+
+			<div class="input-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" th:field="*{email}" placeholder="Email" required>
+			</div>
+
+			<div class="input-group">
+				<label for="mobile">Mobile</label>
+				<input type="number" id="mobile" name="mobile" th:field="*{mobile}" placeholder="Mobile Number" required>
+			</div>
+
+
+
+			<div class="input-group">
+				<label for="subject">Subject</label>
+				<input type="text" id="subject" name="subject" placeholder="Subject" required>
+			</div>
+
+			<div class="input-group">
+				<label for="message">Message</label>
+				<textarea id="message" name="message" placeholder="Your message" required
+					style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; resize: none;"></textarea>
+			</div>
+
+			<button type="submit">Submit Request</button>
+
+			<div class="signup-link">
+				<p>Already Have an Access? <a href="/login">Back to Login</a></p>
+			</div>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

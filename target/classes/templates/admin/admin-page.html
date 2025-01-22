@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sidebar with Dropdown</title>
+	<link rel="stylesheet" th:href="@{/css/admin-page-styles.css}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div th:fragment="content">
+		<div class="page-container">
+	<div class="sidebar">
+		<h2><a href="/admin" style="text-decoration: none; color: inherit;">Admin Page</a></h2>
+		<ul>
+			<li><a href="/status">Status</a></li>
+			<li><a href="/contact-type">Contact Type</a></li>
+			<li><a href="/costcentertype">Cost Center Type</a></li>
+			<li><a href="/country">Country</a></li>
+			<li><a href="/state">State</a></li>
+			<li><a href="/city">City</a></li>
+			<li><a href="/department">Department</a></li>
+			<li><a href="/designation">Designation</a></li>
+			<li><a href="/entity">Entity</a></li>
+			<li><a href="/cost-center">Cost Center</a></li>
+
+		</ul>
+	</div>
+	
+	
+	<div class="main-content">
+		<div th:replace="~{${page} :: content}"></div>
+
+
+	</div>
+
+		</div>
+</body>
+
+</html>
