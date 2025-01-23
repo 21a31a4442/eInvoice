@@ -25,11 +25,11 @@ This repository contains the source code for an eInvoice application built using
 
 ## Technologies Used
 
-**Spring MVC**: For building the web application
-**Spring Security**: For user authentication and authorization
-**JPA**: For data access and persistence
-**MySQL**: As the database
-**HTML, CSS, JavaScript**: For the front-end
+- **Spring MVC**: For building the web application
+- **Spring Security**: For user authentication and authorization
+- **JPA**: For data access and persistence
+- **MySQL**: As the database
+- **HTML, CSS, JavaScript**: For the front-end
 
 ## Installation
 
@@ -51,6 +51,28 @@ Start the Spring Boot application.
 * Access the application: Open a web browser and navigate to the application URL.
 * Login: Use the provided credentials to login as an admin or user.
 * redirect to /admin page and you can add or update the details present in the admin panel. You can also approve requests made by the users
+
+## Future Enhancements
+- **Invoice creation:**
+Users can input all invoice details like customer information, product descriptions, quantities, prices, and taxes directly into the application to generate a digital invoice.
+
+- **Data validation:**
+The system checks for errors in invoice data to ensure accuracy before sending.
+
+- **Electronic submission:**
+Invoices are automatically submitted to the government's Invoice Registration Portal (IRP) where they receive a unique Invoice Reference Number (IRN).
+
+- **Integration with ERP systems**:
+Seamless connection with existing accounting software to pull customer and product data, automatically populate invoices, and update payment information.
+
+- **Digital signature:**
+Invoices are digitally signed to authenticate their origin and prevent tampering.
+
+- **QR code generation:**
+A unique QR code is generated on each invoice that can be scanned to access invoice details for verification.
+
+- **Real-time tracking**:
+Ability to monitor the status of sent invoices, including whether they have been viewed and acknowledged by the recipient. 
 
 ## Contributing
 If you'd like to contribute to this repository, feel free to fork it and submit a pull request. Here's how you can contribute:
